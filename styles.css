@@ -1,0 +1,215 @@
+/* Click para entrar */
+.clicktoenter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  z-index: 1000;
+  cursor: pointer;
+  font-family: "MedievalSharp", serif;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.clicktoenter.fade-out {
+  opacity: 0;
+}
+
+.click-text {
+  animation: animationclicktoenter 1s ease-in-out 1;
+}
+
+/* Fin de Click para entrar */
+
+/* Body para Satella */
+body.satella {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.backgroundvideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -100;
+}
+/* Fin de Body para Satella */
+
+/* Contenedor de Satella */
+.center {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 10px rgba(72, 40, 105, 0.45);
+  animation: center 4.5s ease-in-out infinite;
+  position: absolute;
+  top: 15%;
+}
+
+/* Contenedor de texto e icono */
+.imageandtext {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: flex-start;
+  padding-left: 6%;
+}
+
+/* Imagen de Satella */
+img.satella {
+  width: 100%;
+  max-width: 120px;
+  z-index: 100;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0px 0px 10px 10px rgba(49, 0, 113, 0.45);
+}
+
+/* Nombre de usuario */
+.username {
+  font-size: 3em;
+  color: white;
+  font-weight: bold;
+  padding-right: 65px;
+}
+
+/* Fin de Nombre de usuario */
+/* Fin de Imagen de Satella */
+/* Fin de Contenedor de texto e icono */
+/* Fin de Contenedor de Satella */
+
+/* Links */
+.link{
+  display: flex;
+  position: absolute;
+  top: 40%;
+  gap: 40px;
+  animation: center 4.5s ease-in-out infinite;
+}
+
+/* Link imagen */
+.linkimage{
+    width: 100%;
+    max-width: 50px;
+    z-index: 100;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0px 0px 10px 10px rgba(49, 0, 113, 0.45)
+}
+/* Fin de Links */
+/* Fin de Link imagen */
+
+/* Reproductor */
+.footermusicplayer {
+  color: white;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  bottom: 0%;
+  align-items: end;
+}
+
+.musicplayer {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 300px;
+  border-radius: 100px;
+  box-shadow: 0px 0px 10px 15px rgba(72, 40, 105, 0.45);
+  &::-webkit-media-controls-panel { background-color: rgb(98, 62, 135); }
+  &::-webkit-media-controls-play-button:hover { background-color: rgb(0, 200, 200); border-radius: 50%; }
+  &::-webkit-media-controls-mute-button { background-color: rgb(0, 200, 200); border-radius: 50%; }
+}
+/* Fin de Reproductor */
+
+/* Animaciones */
+@keyframes animationclicktoenter {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+
+@keyframes center {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes erase {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+/* Fin de Animaciones */
+
+/* Utilidades */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#username-particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 90;
+}
+
+.typewritertext {
+  font-size: 12px;
+  color: white;
+  font-family: "MedievalSharp", serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: solid white;
+  width: 0;
+  animation: typing 4.5s steps(48) forwards, erase 3s steps(48) 6s forwards;
+  padding-left: 10px;
+}
+/* Fin de Utilidades */
