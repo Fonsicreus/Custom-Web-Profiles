@@ -1,4 +1,4 @@
-/* Click para entrar */
+/* Click to enter */
 .clicktoenter {
   position: fixed;
   top: 0;
@@ -26,9 +26,9 @@
   animation: animationclicktoenter 1s ease-in-out 1;
 }
 
-/* Fin de Click para entrar */
+/* End of Click to enter */
 
-/* Body para Satella */
+/* Body for Satella */
 body.satella {
   margin: 0;
   padding: 0;
@@ -47,11 +47,11 @@ body.satella {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -100;
+  z-index: -1;
 }
-/* Fin de Body para Satella */
+/* End of Body for Satella */
 
-/* Contenedor de Satella */
+/* Satella container */
 .center {
   background-color: rgba(0, 0, 0, 0.45);
   padding-left: 10px;
@@ -63,7 +63,7 @@ body.satella {
   top: 15%;
 }
 
-/* Contenedor de texto e icono */
+/* Text and icon container */
 .imageandtext {
   display: flex;
   align-items: center;
@@ -72,7 +72,7 @@ body.satella {
   padding-left: 6%;
 }
 
-/* Imagen de Satella */
+/* Satella image */
 img.satella {
   width: 100%;
   max-width: 120px;
@@ -83,7 +83,7 @@ img.satella {
   box-shadow: 0px 0px 10px 10px rgba(49, 0, 113, 0.45);
 }
 
-/* Nombre de usuario */
+/* Username */
 .username {
   font-size: 3em;
   color: white;
@@ -91,13 +91,13 @@ img.satella {
   padding-right: 65px;
 }
 
-/* Fin de Nombre de usuario */
-/* Fin de Imagen de Satella */
-/* Fin de Contenedor de texto e icono */
-/* Fin de Contenedor de Satella */
+/* End of Username */
+/* End of Satella image */
+/* End of Text and icon container */
+/* End of Satella container */
 
 /* Links */
-.link{
+.link {
   display: flex;
   position: absolute;
   top: 40%;
@@ -105,20 +105,20 @@ img.satella {
   animation: center 4.5s ease-in-out infinite;
 }
 
-/* Link imagen */
-.linkimage{
-    width: 100%;
-    max-width: 50px;
-    z-index: 100;
-    border-radius: 50%;
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
-    box-shadow: 0px 0px 10px 10px rgba(49, 0, 113, 0.45)
+/* Link image */
+.linkimage {
+  width: 100%;
+  max-width: 50px;
+  z-index: 100;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0px 0px 10px 10px rgba(49, 0, 113, 0.45);
 }
-/* Fin de Links */
-/* Fin de Link imagen */
+/* End of Links */
+/* End of Link image */
 
-/* Reproductor */
+/* Music player */
 .footermusicplayer {
   color: white;
   width: 100%;
@@ -135,13 +135,13 @@ img.satella {
   width: 300px;
   border-radius: 100px;
   box-shadow: 0px 0px 10px 15px rgba(72, 40, 105, 0.45);
-  &::-webkit-media-controls-panel { background-color: rgb(98, 62, 135); }
-  &::-webkit-media-controls-play-button:hover { background-color: rgb(0, 200, 200); border-radius: 50%; }
-  &::-webkit-media-controls-mute-button { background-color: rgb(0, 200, 200); border-radius: 50%; }
+  &::-webkit-media-controls-panel {background-color: rgb(98, 62, 135);}
+  &::-webkit-media-controls-play-button:hover {background-color: rgb(0, 200, 200);border-radius: 50%;}
+  &::-webkit-media-controls-mute-button {background-color: rgb(0, 200, 200);border-radius: 50%;}
 }
-/* Fin de Reproductor */
+/* End of Music player */
 
-/* Animaciones */
+/* Animations */
 @keyframes animationclicktoenter {
   0% {
     transform: scale(0);
@@ -180,9 +180,9 @@ img.satella {
     width: 0;
   }
 }
-/* Fin de Animaciones */
+/* End of Animations */
 
-/* Utilidades */
+/* Utilities */
 #particles-js {
   position: absolute;
   top: 0;
@@ -212,4 +212,4 @@ img.satella {
   animation: typing 4.5s steps(48) forwards, erase 3s steps(48) 6s forwards;
   padding-left: 10px;
 }
-/* Fin de Utilidades */
+/* End of Utilities */
