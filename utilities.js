@@ -1,7 +1,7 @@
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", () => {
   // Create the overlay
   const overlay = document.createElement("div");
-  overlay.classList.add("clicktoenter"); // Add the class 'clicktoenter'
+  overlay.classList.add("click-to-enter"); // Add the class 'click-to-enter'
 
   // Create the text element inside the overlay
   const textElement = document.createElement("p"); // Use a <p> for the text
@@ -79,18 +79,24 @@ window.onload = function () {
 
   // When the user clicks on the overlay, start the fade, video, and song
   overlay.addEventListener("click", function () {
-    // Start the fade (opacity 0)
-    overlay.classList.add("fade-out");
-
-    const video = document.querySelector(".backgroundvideo");
+    const credits = document.querySelector(".credits");
+    const video = document.querySelector(".background-video");
     const audio = document.querySelector(".musicplayer");
 
+    //Animations
+    overlay.classList.add("fade-out");
+    credits.classList.add("fade-to-the-right");
+
     if (video) video.play();
-    if (audio) audio.play();
+    if (audio) {
+      audio.volume = 0.4; // Set the volume to 0.4, all my friend say it's too loud and they will be deaf
+      audio.play();
+    }
 
     // Wait for the fade to finish (0.5 seconds) and then hide the overlay
     setTimeout(function () {
-      overlay.style.display = "none"; // Hide the overlay completely
+      overlay.style.display = "none";
+      credits.style.display = "none";
       changeLine();
     }, 500); // Matches the duration of the transition, in milliseconds
   });
@@ -159,7 +165,7 @@ window.onload = function () {
   }
 
   // Text to be displayed in the typewriter
-  const textLines = Array.from(document.querySelectorAll(".añadirTexto")).map(
+  const textLines = Array.from(document.querySelectorAll(".añadir-texto")).map(
     (element) => element.innerText
   );
 
@@ -169,7 +175,7 @@ window.onload = function () {
   function changeLine() {
     const textElement = document.createElement("p");
     textElement.innerHTML = textLines[currentLine];
-    textElement.classList.add("typewritertext");
+    textElement.classList.add("typewriter-text");
     const imageAndTextContainer = document.querySelector(".username");
     if (imageAndTextContainer) {
       imageAndTextContainer.appendChild(textElement);
@@ -189,4 +195,52 @@ window.onload = function () {
       }
     }, 10000); // 10 seconds to match with animation
   }
-};
+
+  // Custom Volume Slider
+  const audio = document.getElementById("background-audio");
+  const volumeSlider = document.getElementById("custom-volume-slider-satella");
+
+  volumeSlider.addEventListener("input", () => {
+    audio.volume = volumeSlider.value / 100;
+  });
+
+  audio.addEventListener("volumechange", () => {
+    volumeSlider.value = audio.volume * 100;
+  });
+
+  // Bio pull-down
+  let showBioOrSocial = 1;
+  let isTransitioning = false;
+
+  window.clickOnImage = function () {
+    if (isTransitioning) return; 
+
+    const socials = document.querySelector(".socials");
+    const bio = document.querySelector(".flex-body-bio");
+    isTransitioning = true;
+
+    if (showBioOrSocial === 0) {
+      socials.style.display = "block";
+      socials.classList.remove("fade-to-the-left");
+      socials.classList.add("fade-from-the-right");
+      bio.classList.add("fade-to-the-left");
+      bio.classList.remove("fade-from-the-right");
+      setTimeout(() => {
+        bio.style.display = "none";
+        isTransitioning = false; 
+      }, 1000); 
+      showBioOrSocial = 1;
+    } else {
+      bio.style.display = "flex";
+      socials.classList.add("fade-to-the-left");
+      socials.classList.remove("fade-from-the-right");
+      bio.classList.remove("fade-to-the-left");
+      bio.classList.add("fade-from-the-right");
+      setTimeout(() => {
+        socials.style.display = "none";
+        isTransitioning = false; 
+      }, 1000); 
+      showBioOrSocial = 0;
+    }
+  };
+});

@@ -1,5 +1,5 @@
 /* Click to enter */
-.clicktoenter {
+.click-to-enter {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,19 +11,43 @@
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  z-index: 1000;
+  z-index: 100;
   cursor: pointer;
   font-family: "MedievalSharp", serif;
   opacity: 1;
-  transition: opacity 0.5s ease;
 }
 
-.clicktoenter.fade-out {
+.click-to-enter.fade-out {
   opacity: 0;
 }
 
 .click-text {
-  animation: animationclicktoenter 1s ease-in-out 1;
+  animation: to-the-front 1s ease-in-out 1;
+}
+
+.credits {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-family: "MedievalSharp", serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background-color: rgba(49, 0, 113, 0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(72, 40, 105, 0.45);
+  z-index: 101;
+  animation: to-the-front 1s ease-in-out 1;
+}
+
+.credits.fade-to-the-right {
+  animation: fade-to-the-right 2s ease-in-out forwards;
+}
+
+.credits:hover {
+  background-color: rgba(72, 40, 105, 0.8);
+  color: #9370db;
 }
 
 /* End of Click to enter */
@@ -34,13 +58,21 @@ body.satella {
   padding: 0;
   height: 100vh;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
 }
 
-.backgroundvideo {
+/* I created this so that the main flex is not in the body, which saves me headaches */
+.flex-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -20vh;
+}
+
+.background-video {
   position: fixed;
   top: 0;
   left: 0;
@@ -49,27 +81,20 @@ body.satella {
   object-fit: cover;
   z-index: -1;
 }
+/* End of flex-body for Satella */
 /* End of Body for Satella */
 
 /* Satella container */
 .center {
-  background-color: rgba(0, 0, 0, 0.45);
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 10px rgba(72, 40, 105, 0.45);
-  animation: center 4.5s ease-in-out infinite;
-  position: absolute;
-  top: 15%;
-}
-
-/* Text and icon container */
-.imageandtext {
   display: flex;
   align-items: center;
   gap: 40px;
-  justify-content: flex-start;
-  padding-left: 6%;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.45);
+  padding-left: 40px;
+  border-radius: 100px;
+  box-shadow: 0px 0px 10px 10px rgba(72, 40, 105, 0.45);
+  animation: center 4.5s ease-in-out infinite;
 }
 
 /* Satella image */
@@ -89,6 +114,7 @@ img.satella {
   color: white;
   font-weight: bold;
   padding-right: 65px;
+  height: 10vh;
 }
 
 /* End of Username */
@@ -99,14 +125,14 @@ img.satella {
 /* Links */
 .link {
   display: flex;
-  position: absolute;
-  top: 40%;
+  justify-content: center;
   gap: 40px;
   animation: center 4.5s ease-in-out infinite;
+  padding-top: 2vh;
 }
 
 /* Link image */
-.linkimage {
+.link-image {
   width: 100%;
   max-width: 50px;
   z-index: 100;
@@ -114,35 +140,120 @@ img.satella {
   object-fit: cover;
   aspect-ratio: 1 / 1;
   box-shadow: 0px 0px 10px 10px rgba(49, 0, 113, 0.45);
+  border: 2px solid hsl(260, 60%, 30%);
 }
 /* End of Links */
 /* End of Link image */
 
-/* Music player */
-.footermusicplayer {
-  color: white;
+/* Bio */
+.flex-body-bio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
-  z-index: 1;
-  position: fixed;
-  bottom: 0%;
-  align-items: end;
+  height: 100%;
+  position: absolute;
+  top: -20vh;
 }
 
+.bio {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 10px rgba(72, 40, 105, 0.45);
+  animation: center 4.5s ease-in-out infinite;
+}
+
+.bio-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bio-list li {
+  text-align: left;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'MedievalSharp', serif;
+  font-size: 1.2em;
+  color: #f0f0f0;
+}
+
+.soft-link {
+  color: #4b0082; 
+  text-decoration: none;
+}
+
+.soft-link:hover {
+  color: blue; 
+  text-decoration: underline;
+}
+/* Bio End */
+
+/* Music player */
 .musicplayer {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  width: 300px;
+  position: fixed;
+  bottom: 7%;
+  right: -2%;
+  width: max-content;
   border-radius: 100px;
   box-shadow: 0px 0px 10px 15px rgba(72, 40, 105, 0.45);
-  &::-webkit-media-controls-panel {background-color: rgb(98, 62, 135);}
-  &::-webkit-media-controls-play-button:hover {background-color: rgb(0, 200, 200);border-radius: 50%;}
-  &::-webkit-media-controls-mute-button {background-color: rgb(0, 200, 200);border-radius: 50%;}
+  transform: rotate(-90deg);
+  transform-origin: center;
+  background-color: rgba(49, 0, 113, 0.5);
+}
+
+/* Pull-down menu */
+.pull-down-menu {
+  position: absolute;
+  right: -48px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 120px;
+  cursor: pointer;
+  border-radius: 100px;
+  box-shadow: 0px 0px 10px 10px rgba(35, 0, 80, 0.45);
+  background-color: rgba(49, 0, 113, 0.5);
+}
+
+/* Custom VolumeSlider */
+#custom-volume-slider-satella {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+  &::-webkit-slider-runnable-track {
+    height: 10px;
+    background: linear-gradient(
+      to right,
+      rgba(72, 40, 105, 0.8),
+      rgba(147, 112, 219, 0.5)
+    );
+    border-radius: 5px;
+  }
+  &::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4b0082;
+    border: 2px solid hsl(260, 60%, 55%);
+    border-radius: 50%;
+    margin-top: -5px;
+    cursor: pointer;
+  }
+  &::-webkit-slider-thumb:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 12px rgba(72, 40, 105, 0.45);
+  }
 }
 /* End of Music player */
 
 /* Animations */
-@keyframes animationclicktoenter {
+@keyframes to-the-front {
   0% {
     transform: scale(0);
     opacity: 0;
@@ -180,6 +291,35 @@ img.satella {
     width: 0;
   }
 }
+
+@keyframes fade-to-the-right {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vw);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-to-the-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
+
+@keyframes fade-from-the-right {
+  0% {
+    transform: translateX(250%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 /* End of Animations */
 
 /* Utilities */
@@ -201,7 +341,7 @@ img.satella {
   z-index: 90;
 }
 
-.typewritertext {
+.typewriter-text {
   font-size: 12px;
   color: white;
   font-family: "MedievalSharp", serif;
@@ -211,5 +351,13 @@ img.satella {
   width: 0;
   animation: typing 4.5s steps(48) forwards, erase 3s steps(48) 6s forwards;
   padding-left: 10px;
+}
+
+.fade-to-the-left {
+  animation: fade-to-the-left 1s forwards ease-in;
+}
+
+.fade-from-the-right {
+  animation: fade-from-the-right 1s forwards ease-out;
 }
 /* End of Utilities */

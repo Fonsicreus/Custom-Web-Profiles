@@ -11,67 +11,104 @@
     <title>Satella</title>
   </head>
   <body class="satella">
-    <script src="utilidades.js"></script>
+    <script src="utilities.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-    <div class="center">
-      <div class="imageandtext">
-        <img
-          class="satella"
-          src="resources/images/icon_satella.gif"
-          alt="Icon"
-        />
-        <p class="username">サテラ</p>
+    <div class="flex-body">
+      <div class="socials">
+        <div class="center">
+          <img
+            class="satella"
+            src="resources/images/icon_satella.gif"
+            alt="Icon"
+          />
+          <p class="username">サテラ</p>
+        </div>
+
+        <div class="link">
+          <a href="https://steamcommunity.com/id/Fonsicreus/" target="_blank">
+            <img
+              class="link-image"
+              src="resources/images/icon_steam.png"
+              alt="Icon"
+            />
+          </a>
+          <a href="https://x.com/Fonsicreus" target="_blank">
+            <img
+              class="link-image"
+              src="resources/images/icon_x.jpg"
+              alt="Icon"
+            />
+          </a>
+          <a href="https://discord.gg/Aje9WwjpRu" target="_blank">
+            <img
+              class="link-image"
+              src="resources/images/icon_discord.png"
+              alt="Icon"
+            />
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="link">
-      <a href="https://steamcommunity.com/id/Fonsicreus/" target="_blank">
-        <img
-          class="linkimage"
-          src="resources/images/icon_steam.png"
-          alt="Icon"
-        />
-      </a>
-      <a href="https://x.com/Fonsicreus" target="_blank">
-        <img
-          class="linkimage"
-          src="resources/images/icon_x.jpg"
-          alt="Icon"
-        />
-      </a>
-      <a href="https://discord.gg/Aje9WwjpRu" target="_blank">
-        <img
-          class="linkimage"
-          src="resources/images/icon_discord.png"
-          alt="Icon"
-        />
-      </a>
+    <div class="flex-body-bio" style="display: none">
+      <div class="bio">
+        <ul class="bio-list">
+          <li>This is my first website!</li>
+          <li>I am studying HTML, CSS, and JS.</li>
+          <li>3 years of experience in Blender as an animator.</li>
+          <li>I have studies in computer assembly, maintenance, and networking.</li>
+          <li>My favorite anime are Frieren, Re:Zero, Ookami Kodomo no Ame to Yuki, and Houseki no Kuni.</li>
+          <li><a href="https://myanimelist.net/profile/Fonsicreus" target="_blank" class="dark-link">Here is a link to my MyAnimeList profile if anyone is interested</a></li>
+        </ul>
+      </div>
     </div>
+
+    <a
+      href="https://www.youtube.com/watch?v=5XJAiHD8rXQ"
+      class="credits"
+      target="_blank"
+      >CREDITS</a
+    >
+
+    <audio class="musicplayer" id="background-audio" loop>
+      <source src="resources/audio/background_satella.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <div class="musicplayer">
+      <input
+        type="range"
+        id="custom-volume-slider-satella"
+        min="0"
+        max="100"
+        value="100"
+      />
+    </div>
+
+    <img
+      class="pull-down-menu"
+      src="resources/images/icon_arrow.png"
+      alt="Arrow"
+      onclick="clickOnImage()"
+    />
 
     <!-- Hidden text for the .js to use this text to display -->
-    <p class="añadirTexto" style="display: none">
+    <p class="añadir-texto" style="display: none">
       I'll do anything to make you stay with me...
     </p>
-    <p class="añadirTexto" style="display: none">
+    <p class="añadir-texto" style="display: none">
       You belong to me, no one else...
     </p>
-    <p class="añadirTexto" style="display: none">
+    <p class="añadir-texto" style="display: none">
       I can't live without you, don't you see that?
     </p>
-    <p class="añadirTexto" style="display: none">
+    <p class="añadir-texto" style="display: none">
       Don't you dare to leave me...
     </p>
-    <p class="añadirTexto" style="display: none">DON'T YOU DARE TO LEAVE ME</p>
+    <p class="añadir-texto" style="display: none">DON'T YOU DARE TO LEAVE ME</p>
 
-    <div class="footermusicplayer">
-      <audio class="musicplayer" loop controls>
-        <source src="resources/audio/background_satella.mp3" type="audio/mp3" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-
-    <video loop muted class="backgroundvideo">
+    <video loop muted class="background-video">
       <source src="resources/video/background_satella.mp4" type="video/mp4" />
       Your browser does not support the video element.
     </video>
