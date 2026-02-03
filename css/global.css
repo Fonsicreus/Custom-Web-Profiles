@@ -1,0 +1,10 @@
+/* Shared base styles for all pages */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}

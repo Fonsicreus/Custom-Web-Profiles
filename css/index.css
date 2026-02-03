@@ -1,0 +1,12 @@
+/* Styles for index (redirect) page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+}
+
+a {
+  color: #4b0082;
+}

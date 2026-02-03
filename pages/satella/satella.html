@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="./satella.css" />
     <!-- Medieval style font for the Satella theme -->
     <link
       href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
@@ -15,7 +16,7 @@
 
   <body class="satella">
     <!-- Custom logic and particles library for background effects -->
-    <script src="utilities.js"></script>
+    <script src="./utilities.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <!--Header Content: avatar + name + social links -->
@@ -23,36 +24,20 @@
       <div class="socials">
         <!-- Animated avatar (gif) and username -->
         <div class="center">
-          <img
-            class="satella"
-            src="resources/images/icon_satella.gif"
-            alt="Icon"
-          />
+          <img class="satella" src="images/icon_satella.gif" alt="Icon" />
           <p class="username">サテラ</p>
         </div>
 
         <!-- Clickable icons: Steam, X (Twitter), Discord -->
         <div class="link">
           <a href="https://steamcommunity.com/id/Fonsicreus/" target="_blank">
-            <img
-              class="link-image"
-              src="resources/images/icon_steam.png"
-              alt="Icon"
-            />
+            <img class="link-image" src="images/icon_steam.png" alt="Icon" />
           </a>
           <a href="https://x.com/Fonsicreus" target="_blank">
-            <img
-              class="link-image"
-              src="resources/images/icon_x.jpg"
-              alt="Icon"
-            />
+            <img class="link-image" src="images/icon_x.jpg" alt="Icon" />
           </a>
           <a href="https://discord.gg/Aje9WwjpRu" target="_blank">
-            <img
-              class="link-image"
-              src="resources/images/icon_discord.png"
-              alt="Icon"
-            />
+            <img class="link-image" src="images/icon_discord.png" alt="Icon" />
           </a>
         </div>
       </div>
@@ -95,7 +80,10 @@
 
     <!-- Background music loop (controlled by utilities.js) -->
     <audio class="musicplayer" id="background-audio" loop>
-      <source src="resources/audio/background_satella.mp3" type="audio/mp3" />
+      <source
+        src="../../resources/audio/background_satella.mp3"
+        type="audio/mp3"
+      />
       Your browser does not support the audio element.
     </audio>
 
@@ -113,7 +101,7 @@
     <!-- Arrow that toggles the biography on click (clickOnImage in utilities.js) -->
     <img
       class="pull-down-menu"
-      src="resources/images/icon_arrow.png"
+      src="images/icon_arrow.png"
       alt="Arrow"
       onclick="clickOnImage()"
     />
@@ -135,7 +123,7 @@
 
     <!-- Background video loop, muted (audio handled by the <audio> above) -->
     <video loop muted class="background-video">
-      <source src="resources/video/background_satella.mp4" type="video/mp4" />
+      <source src="video/background_satella.mp4" type="video/mp4" />
       Your browser does not support the video element.
     </video>
   </body>

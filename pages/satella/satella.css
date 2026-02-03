@@ -1,4 +1,45 @@
-/* Click to enter */
+/*
+ * Satella profile page styles
+ * Theme: Re:Zero-inspired layout with video background, particles, and medieval typography.
+ */
+
+/* ==========================================================================
+   Page layout & background
+   ========================================================================== */
+
+body.satella {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Main content wrapper; keeps flex layout out of body for easier control */
+.flex-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -20vh;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* ==========================================================================
+   Entry overlay ("click to enter")
+   ========================================================================== */
+
 .click-to-enter {
   position: fixed;
   top: 0;
@@ -25,6 +66,7 @@
   animation: to-the-front 1s ease-in-out 1;
 }
 
+/* Credits link (YouTube source); fixed bottom-right */
 .credits {
   position: fixed;
   bottom: 10px;
@@ -50,41 +92,11 @@
   color: #9370db;
 }
 
-/* End of Click to enter */
+/* ==========================================================================
+   Profile header (avatar + username)
+   ========================================================================== */
 
-/* Body for Satella */
-body.satella {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* I created this so that the main flex is not in the body, which saves me headaches */
-.flex-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: -20vh;
-}
-
-.background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-/* End of flex-body for Satella */
-/* End of Body for Satella */
-
-/* Satella container */
+/* Pill-shaped container for avatar and name */
 .center {
   display: flex;
   align-items: center;
@@ -97,7 +109,6 @@ body.satella {
   animation: center 4.5s ease-in-out infinite;
 }
 
-/* Satella image */
 img.satella {
   width: 100%;
   max-width: 120px;
@@ -108,7 +119,6 @@ img.satella {
   box-shadow: 0px 0px 10px 10px rgba(49, 0, 113, 0.45);
 }
 
-/* Username */
 .username {
   font-size: 3em;
   color: white;
@@ -117,12 +127,10 @@ img.satella {
   height: 10vh;
 }
 
-/* End of Username */
-/* End of Satella image */
-/* End of Text and icon container */
-/* End of Satella container */
+/* ==========================================================================
+   Social links
+   ========================================================================== */
 
-/* Links */
 .link {
   display: flex;
   justify-content: center;
@@ -131,7 +139,6 @@ img.satella {
   padding-top: 2vh;
 }
 
-/* Link image */
 .link-image {
   width: 100%;
   max-width: 50px;
@@ -142,10 +149,11 @@ img.satella {
   box-shadow: 0px 0px 10px 10px rgba(49, 0, 113, 0.45);
   border: 2px solid hsl(260, 60%, 30%);
 }
-/* End of Links */
-/* End of Link image */
 
-/* Bio */
+/* ==========================================================================
+   Biography (expandable panel)
+   ========================================================================== */
+
 .flex-body-bio {
   display: flex;
   justify-content: center;
@@ -177,23 +185,27 @@ img.satella {
   margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
-  font-family: 'MedievalSharp', serif;
+  font-family: "MedievalSharp", serif;
   font-size: 1.2em;
   color: #f0f0f0;
 }
 
-.soft-link {
-  color: #4b0082; 
+.soft-link,
+.dark-link {
+  color: #4b0082;
   text-decoration: none;
 }
 
-.soft-link:hover {
-  color: blue; 
+.soft-link:hover,
+.dark-link:hover {
+  color: blue;
   text-decoration: underline;
 }
-/* Bio End */
 
-/* Music player */
+/* ==========================================================================
+   Music player & volume
+   ========================================================================== */
+
 .musicplayer {
   position: fixed;
   bottom: 120px;
@@ -206,7 +218,45 @@ img.satella {
   background-color: rgba(49, 0, 113, 0.5);
 }
 
-/* Pull-down menu */
+/* Custom range input styling for volume */
+#custom-volume-slider-satella {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+#custom-volume-slider-satella::-webkit-slider-runnable-track {
+  height: 10px;
+  background: linear-gradient(
+    to right,
+    rgba(72, 40, 105, 0.8),
+    rgba(147, 112, 219, 0.5)
+  );
+  border-radius: 5px;
+}
+
+#custom-volume-slider-satella::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4b0082;
+  border: 2px solid hsl(260, 60%, 55%);
+  border-radius: 50%;
+  margin-top: -5px;
+  cursor: pointer;
+}
+
+#custom-volume-slider-satella::-webkit-slider-thumb:hover {
+  transform: scale(1.5);
+  box-shadow: 0 0 12px rgba(72, 40, 105, 0.45);
+}
+
+/* ==========================================================================
+   Bio toggle (arrow button)
+   ========================================================================== */
+
 .pull-down-menu {
   position: absolute;
   right: 10px;
@@ -219,40 +269,10 @@ img.satella {
   background-color: rgba(49, 0, 113, 0.5);
 }
 
-/* Custom VolumeSlider */
-#custom-volume-slider-satella {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 100%;
-  background: transparent;
-  &::-webkit-slider-runnable-track {
-    height: 10px;
-    background: linear-gradient(
-      to right,
-      rgba(72, 40, 105, 0.8),
-      rgba(147, 112, 219, 0.5)
-    );
-    border-radius: 5px;
-  }
-  &::-webkit-slider-thumb {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #4b0082;
-    border: 2px solid hsl(260, 60%, 55%);
-    border-radius: 50%;
-    margin-top: -5px;
-    cursor: pointer;
-  }
-  &::-webkit-slider-thumb:hover {
-    transform: scale(1.5);
-    box-shadow: 0 0 12px rgba(72, 40, 105, 0.45);
-  }
-}
-/* End of Music player */
+/* ==========================================================================
+   Keyframe animations
+   ========================================================================== */
 
-/* Animations */
 @keyframes to-the-front {
   0% {
     transform: scale(0);
@@ -264,6 +284,7 @@ img.satella {
   }
 }
 
+/* Subtle float used by profile and bio blocks */
 @keyframes center {
   0%,
   100% {
@@ -274,6 +295,7 @@ img.satella {
   }
 }
 
+/* Typewriter effect for random phrases under username */
 @keyframes typing {
   from {
     width: 0;
@@ -292,6 +314,7 @@ img.satella {
   }
 }
 
+/* Entry overlay exit; credits slide down and off */
 @keyframes fade-to-the-right {
   0% {
     transform: translateY(0);
@@ -303,6 +326,7 @@ img.satella {
   }
 }
 
+/* Bio panel transition: slide out to the left */
 @keyframes fade-to-the-left {
   0% {
     transform: translateX(0);
@@ -312,6 +336,7 @@ img.satella {
   }
 }
 
+/* Bio panel transition: slide in from the right */
 @keyframes fade-from-the-right {
   0% {
     transform: translateX(250%);
@@ -320,9 +345,12 @@ img.satella {
     transform: translateX(0%);
   }
 }
-/* End of Animations */
 
-/* Utilities */
+/* ==========================================================================
+   Utilities: particles & typewriter
+   ========================================================================== */
+
+/* Full-screen particles behind overlay (entry screen) */
 #particles-js {
   position: absolute;
   top: 0;
@@ -332,6 +360,7 @@ img.satella {
   z-index: -1;
 }
 
+/* Particles around the username area */
 #username-particles-js {
   position: absolute;
   top: 0;
@@ -353,6 +382,7 @@ img.satella {
   padding-left: 10px;
 }
 
+/* Animation utility classes for bio toggle */
 .fade-to-the-left {
   animation: fade-to-the-left 1s forwards ease-in;
 }
@@ -361,10 +391,12 @@ img.satella {
   animation: fade-from-the-right 1s forwards ease-out;
 }
 
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
 @media screen and (max-width: 420px) {
   .musicplayer {
     display: none;
   }
 }
-
-/* End of Utilities */
