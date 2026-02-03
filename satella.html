@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- Medieval style font for the Satella theme -->
     <link
       href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
       rel="stylesheet"
@@ -11,11 +12,14 @@
     <title>Satella</title>
   </head>
   <body class="satella">
+    <!-- Custom logic and particles library for background effects -->
     <script src="utilities.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
+    <!-- Main container: avatar + name + social links -->
     <div class="flex-body">
       <div class="socials">
+        <!-- Animated avatar (gif) and username -->
         <div class="center">
           <img
             class="satella"
@@ -25,6 +29,7 @@
           <p class="username">サテラ</p>
         </div>
 
+        <!-- Clickable icons: Steam, X (Twitter), Discord -->
         <div class="link">
           <a href="https://steamcommunity.com/id/Fonsicreus/" target="_blank">
             <img
@@ -51,6 +56,7 @@
       </div>
     </div>
 
+    <!-- Expandable biography (hidden by default; shown when the arrow is clicked) -->
     <div class="flex-body-bio" style="display: none">
       <div class="bio">
         <ul class="bio-list">
@@ -64,6 +70,7 @@
       </div>
     </div>
 
+    <!-- Link to credits (YouTube video) -->
     <a
       href="https://www.youtube.com/watch?v=5XJAiHD8rXQ"
       class="credits"
@@ -71,11 +78,13 @@
       >CREDITS</a
     >
 
+    <!-- Background music loop (controlled by utilities.js) -->
     <audio class="musicplayer" id="background-audio" loop>
       <source src="resources/audio/background_satella.mp3" type="audio/mp3" />
       Your browser does not support the audio element.
     </audio>
 
+    <!-- Slider to increase/decrease music volume -->
     <div class="musicplayer">
       <input
         type="range"
@@ -86,6 +95,7 @@
       />
     </div>
 
+    <!-- Arrow that toggles the biography on click (clickOnImage in utilities.js) -->
     <img
       class="pull-down-menu"
       src="resources/images/icon_arrow.png"
@@ -93,7 +103,7 @@
       onclick="clickOnImage()"
     />
 
-    <!-- Hidden text for the .js to use this text to display -->
+    <!-- Hidden letters: JS picks them randomly and displays on the page -->
     <p class="añadir-texto" style="display: none">
       I'll do anything to make you stay with me...
     </p>
@@ -108,6 +118,7 @@
     </p>
     <p class="añadir-texto" style="display: none">DON'T YOU DARE TO LEAVE ME</p>
 
+    <!-- Background video loop, muted (audio handled by the <audio> above) -->
     <video loop muted class="background-video">
       <source src="resources/video/background_satella.mp4" type="video/mp4" />
       Your browser does not support the video element.
