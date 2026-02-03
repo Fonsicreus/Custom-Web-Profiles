@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- Fuente estilo medieval para el tema Satella -->
     <link
       href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
       rel="stylesheet"
@@ -11,11 +12,14 @@
     <title>Satella</title>
   </head>
   <body class="satella">
+    <!-- Lógica propia y librería de partículas para efectos de fondo -->
     <script src="utilities.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
+    <!-- Contenedor principal: avatar + nombre + enlaces a redes -->
     <div class="flex-body">
       <div class="socials">
+        <!-- Avatar animado (gif) y nombre de usuario -->
         <div class="center">
           <img
             class="satella"
@@ -25,6 +29,7 @@
           <p class="username">サテラ</p>
         </div>
 
+        <!-- Iconos clicables: Steam, X (Twitter), Discord -->
         <div class="link">
           <a href="https://steamcommunity.com/id/Fonsicreus/" target="_blank">
             <img
@@ -51,6 +56,7 @@
       </div>
     </div>
 
+    <!-- Biografía expandible (oculta por defecto; se muestra al bajar la flecha) -->
     <div class="flex-body-bio" style="display: none">
       <div class="bio">
         <ul class="bio-list">
@@ -64,6 +70,7 @@
       </div>
     </div>
 
+    <!-- Enlace a créditos (vídeo de YouTube) -->
     <a
       href="https://www.youtube.com/watch?v=5XJAiHD8rXQ"
       class="credits"
@@ -71,11 +78,13 @@
       >CREDITS</a
     >
 
+    <!-- Música de fondo en bucle (controlada por utilities.js) -->
     <audio class="musicplayer" id="background-audio" loop>
       <source src="resources/audio/background_satella.mp3" type="audio/mp3" />
       Your browser does not support the audio element.
     </audio>
 
+    <!-- Slider para subir/bajar el volumen de la música -->
     <div class="musicplayer">
       <input
         type="range"
@@ -86,6 +95,7 @@
       />
     </div>
 
+    <!-- Flecha que al hacer clic muestra/oculta la biografía (clickOnImage en utilities.js) -->
     <img
       class="pull-down-menu"
       src="resources/images/icon_arrow.png"
@@ -93,7 +103,7 @@
       onclick="clickOnImage()"
     />
 
-    <!-- Hidden text for the .js to use this text to display -->
+    <!-- Frases ocultas: el JS las elige al azar y las muestra en la página -->
     <p class="añadir-texto" style="display: none">
       I'll do anything to make you stay with me...
     </p>
@@ -108,6 +118,7 @@
     </p>
     <p class="añadir-texto" style="display: none">DON'T YOU DARE TO LEAVE ME</p>
 
+    <!-- Vídeo de fondo en bucle, sin sonido (el audio va por el <audio> de arriba) -->
     <video loop muted class="background-video">
       <source src="resources/video/background_satella.mp4" type="video/mp4" />
       Your browser does not support the video element.
