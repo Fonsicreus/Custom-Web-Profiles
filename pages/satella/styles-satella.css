@@ -1,3 +1,8 @@
+/*
+ * Satella profile page styles
+ * Theme: Re:Zero-inspired layout.
+ */
+
 /* Click to enter */
 .click-to-enter {
   position: fixed;
@@ -122,7 +127,7 @@ img.satella {
 /* End of Text and icon container */
 /* End of Satella container */
 
-/* Links */
+/* Social links */
 .link {
   display: flex;
   justify-content: center;
@@ -142,8 +147,7 @@ img.satella {
   box-shadow: 0px 0px 10px 10px rgba(49, 0, 113, 0.45);
   border: 2px solid hsl(260, 60%, 30%);
 }
-/* End of Links */
-/* End of Link image */
+/* End of Social links */
 
 /* Bio */
 .flex-body-bio {
