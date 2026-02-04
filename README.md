@@ -14,7 +14,7 @@ Custom web profiles to use as a link on Discord or other platforms. I made this 
 
 - Expandable bio on arrow click
 - Random hidden phrases on the page
-- 
+  
 ### Screenshot
 
 ![](./pages/satella/screenshot.png)
