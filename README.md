@@ -1,25 +1,15 @@
 # Custom Web Profiles
 
-Custom web profiles to use as a link on Discord or other platforms. Inspired by [guns.lol](https://guns.lol), built in a simple and free way with HTML, CSS, and JavaScript.
+Custom web profiles to use as a link on Discord or other platforms. I made this originally inspired by guns.lol, a site where you make your own profile prettier to link it on discord. I wanted to learn how to do it myself in a more basic and free way.
 
-## Demo
+## Webs
 
-**Live:** [https://fonsicreus.github.io/Custom-Web-Profiles/](https://fonsicreus.github.io/Custom-Web-Profiles/)
-
-## Contents
-
-- **Satella** — Profile with a Satella (Re:Zero) themed layout: background video, particles, animated avatar, social links, and expandable bio.
+**Satella:** [https://fonsicreus.github.io/Custom-Web-Profiles/](https://fonsicreus.github.io/Custom-Web-Profiles/satella.html)
 
 ## Features (Satella profile)
 
-- Looping background video
-- Interactive particles (particles.js)
-- Animated avatar (GIF) and username
-- Links to Steam, X (Twitter), and Discord
 - Expandable bio on arrow click
-- Background music with volume control
 - Random hidden phrases on the page
-- Medieval-style typography (MedievalSharp)
 
 ## Credits
 
