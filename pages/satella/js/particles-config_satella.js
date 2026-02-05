@@ -1,4 +1,3 @@
-
 export const  config1= {
     particles: {
       number: {
