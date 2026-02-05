@@ -158,7 +158,13 @@ img.satella {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: -20vh;
+  top: 0vh;
+}
+
+@media screen and (max-width: 420) {
+  .flex-body-bio {
+    
+  }
 }
 
 .bio {
@@ -363,5 +369,11 @@ img.satella {
 
 .fade-from-the-right {
   animation: fade-from-the-right 1s forwards ease-out;
+}
+
+@media screen and (max-width: 420px) {
+    .musicplayer {
+    display: none;
+  }
 }
 /* End of Utilities */
