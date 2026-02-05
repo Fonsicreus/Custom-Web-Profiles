@@ -161,12 +161,6 @@ img.satella {
   top: 0vh;
 }
 
-@media screen and (max-width: 420) {
-  .flex-body-bio {
-    
-  }
-}
-
 .bio {
   background-color: rgba(0, 0, 0, 0.45);
   padding-left: 40px;
