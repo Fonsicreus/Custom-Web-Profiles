@@ -69,12 +69,11 @@ body.satella {
 .flex-body {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
   position: relative;
-  top: -20vh;
 }
 
 .background-video {
@@ -92,11 +91,11 @@ body.satella {
 /* Satella container */
 .center {
   display: flex;
+  margin-top: 10vh;
+  flex-direction: row;
   align-items: center;
-  gap: 40px;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.45);
-  padding-left: 40px;
   border-radius: 100px;
   box-shadow: 0px 0px 10px 10px rgba(72, 40, 105, 0.45);
   animation: center 4.5s ease-in-out infinite;
@@ -106,6 +105,8 @@ body.satella {
 img.satella {
   width: 100%;
   max-width: 120px;
+  margin-left: 40px;
+  margin-right: 40px;
   z-index: 100;
   border-radius: 50%;
   object-fit: cover;
@@ -119,6 +120,7 @@ img.satella {
   color: white;
   font-weight: bold;
   padding-right: 65px;
+  width: 25vh;
   height: 10vh;
 }
 
@@ -181,18 +183,18 @@ img.satella {
   margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
-  font-family: 'MedievalSharp', serif;
+  font-family: "MedievalSharp", serif;
   font-size: 1.2em;
   color: #f0f0f0;
 }
 
 .soft-link {
-  color: #4b0082; 
+  color: #4b0082;
   text-decoration: none;
 }
 
 .soft-link:hover {
-  color: blue; 
+  color: blue;
   text-decoration: underline;
 }
 /* Bio End */
@@ -352,7 +354,6 @@ img.satella {
   white-space: nowrap;
   overflow: hidden;
   border-right: solid white;
-  width: 0;
   animation: typing 4.5s steps(48) forwards, erase 3s steps(48) 6s forwards;
   padding-left: 10px;
 }
@@ -365,9 +366,4 @@ img.satella {
   animation: fade-from-the-right 1s forwards ease-out;
 }
 
-@media screen and (max-width: 420px) {
-    .musicplayer {
-    display: none;
-  }
-}
 /* End of Utilities */
