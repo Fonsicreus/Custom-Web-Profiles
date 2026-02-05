@@ -3,6 +3,14 @@
  * Theme: Re:Zero-inspired layout.
  */
 
+/* Prevent unwanted scrolling on mobile and horizontal overflow */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Click to enter */
 .click-to-enter {
   position: fixed;
@@ -59,22 +67,16 @@
 
 /* Body for Satella */
 body.satella {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow: hidden;
-}
-
-/* I created this so that the main flex is not in the body, which saves me headaches */
-.flex-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: -20vh;
+  overflow: hidden; /* prevent page vertical scroll */
+  overscroll-behavior: contain; /* avoid overscroll bounce on mobile */
+  touch-action: manipulation;
 }
 
 .background-video {
@@ -92,11 +94,11 @@ body.satella {
 /* Satella container */
 .center {
   display: flex;
+  margin-top: 10vh;
+  flex-direction: row;
   align-items: center;
-  gap: 40px;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.45);
-  padding-left: 40px;
   border-radius: 100px;
   box-shadow: 0px 0px 10px 10px rgba(72, 40, 105, 0.45);
   animation: center 4.5s ease-in-out infinite;
@@ -106,6 +108,8 @@ body.satella {
 img.satella {
   width: 100%;
   max-width: 120px;
+  margin-left: 40px;
+  margin-right: 40px;
   z-index: 100;
   border-radius: 50%;
   object-fit: cover;
@@ -119,6 +123,7 @@ img.satella {
   color: white;
   font-weight: bold;
   padding-right: 65px;
+  width: 25vh;
   height: 10vh;
 }
 
@@ -151,23 +156,21 @@ img.satella {
 
 /* Bio */
 .flex-body-bio {
+  position: fixed;
+  inset: 0; 
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: -20vh;
 }
 
 .bio {
   background-color: rgba(0, 0, 0, 0.45);
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 24px 40px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 10px rgba(72, 40, 105, 0.45);
   animation: center 4.5s ease-in-out infinite;
+  max-width: 80vw;
+  width: min(700px, 90%);
 }
 
 .bio-list {
@@ -181,45 +184,44 @@ img.satella {
   margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
-  font-family: 'MedievalSharp', serif;
+  font-family: "MedievalSharp", serif;
   font-size: 1.2em;
   color: #f0f0f0;
 }
 
 .soft-link {
-  color: #4b0082; 
+  color: #4b0082;
   text-decoration: none;
 }
 
 .soft-link:hover {
-  color: blue; 
+  color: blue;
   text-decoration: underline;
 }
 /* Bio End */
+
+/* Pull-down menu */
+.pull-down-menu {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  max-width: 120px;
+  cursor: pointer;
+  border-radius: 100px;
+  box-shadow: 0px 0px 10px 10px rgba(35, 0, 80, 0.45);
+  background-color: rgba(49, 0, 113, 0.5);
+}
 
 /* Music player */
 .musicplayer {
   position: fixed;
   bottom: 7%;
-  right: -2%;
+  right: 10px;
   width: max-content;
   border-radius: 100px;
   box-shadow: 0px 0px 10px 15px rgba(72, 40, 105, 0.45);
   transform: rotate(-90deg);
   transform-origin: center;
-  background-color: rgba(49, 0, 113, 0.5);
-}
-
-/* Pull-down menu */
-.pull-down-menu {
-  position: absolute;
-  right: -48px;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 120px;
-  cursor: pointer;
-  border-radius: 100px;
-  box-shadow: 0px 0px 10px 10px rgba(35, 0, 80, 0.45);
   background-color: rgba(49, 0, 113, 0.5);
 }
 
@@ -352,7 +354,6 @@ img.satella {
   white-space: nowrap;
   overflow: hidden;
   border-right: solid white;
-  width: 0;
   animation: typing 4.5s steps(48) forwards, erase 3s steps(48) 6s forwards;
   padding-left: 10px;
 }
@@ -364,4 +365,39 @@ img.satella {
 .fade-from-the-right {
   animation: fade-from-the-right 1s forwards ease-out;
 }
+
 /* End of Utilities */
+
+/* Media querys */
+
+@media screen and (max-width: 1000px) {
+  .pull-down-menu {
+    top: 68%;
+    right: 12px;
+    transform: translateY(-50%);
+    max-width: 90px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+ .center {
+  width: 400px;
+ }
+
+ .img-satella {
+  margin-right: 0;
+ }
+
+ .bio {
+  width: 400px;
+  padding: 10px;
+ }
+
+ .pull-down-menu {
+    top: 70%;
+  }
+
+}
+
+/* End of Media querys */

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./pages/satella/styles-satella.css" />
+    <link rel="stylesheet" href="./pages/satella/satella.css" />
     <!-- Medieval style font for the Satella theme -->
     <link
       href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
@@ -13,7 +13,7 @@
   </head>
   <body class="satella">
     <!-- Custom logic and particles library for background effects -->
-    <script src="./pages/satella/utilities.js"></script>
+    <script src="./pages/satella/js/index_satella.js" type="module" ></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <main class="flex-body">
@@ -74,23 +74,25 @@
         class="pull-down-menu"
         src="./pages/satella/images/icon_arrow.png"
         alt="Arrow"
-        onclick="clickOnImage()"
+        id="arrow"
       />
 
       <!-- Hidden phrases: JS picks them randomly and displays on the page -->
-      <p class="añadir-texto" style="display: none">
+      <p class="add-text" style="display: none">
         I'll do anything to make you stay with me...
       </p>
-      <p class="añadir-texto" style="display: none">
+      <p class="add-text" style="display: none">
         You belong to me, no one else...
       </p>
-      <p class="añadir-texto" style="display: none">
+      <p class="add-text" style="display: none">
         I can't live without you, don't you see that?
       </p>
-      <p class="añadir-texto" style="display: none">
+      <p class="add-text" style="display: none">
         Don't you dare to leave me...
       </p>
-      <p class="añadir-texto" style="display: none">DON'T YOU DARE TO LEAVE ME</p>
+      <p class="add-text" style="display: none">
+        DON'T YOU DARE TO LEAVE ME
+      </p>
     </main>
 
       <!-- Link to credits (YouTube video) -->
