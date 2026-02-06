@@ -88,7 +88,8 @@ body {
 }
 
 .avatar {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     opacity: 75%;
     user-select: none;
     border-radius: 2rem;
