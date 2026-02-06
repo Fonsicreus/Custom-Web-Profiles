@@ -1,12 +1,8 @@
 # Custom Web Profiles
 
-Custom web profiles to use as a link on Discord or other platforms. Inspired by [guns.lol](https://guns.lol), built in a simple and free way with HTML, CSS, and JavaScript.
+Custom web profiles to use as a link on Discord or other platforms. I made this originally inspired by guns.lol, a site where you make your own profile prettier to link it on discord. I wanted to learn how to do it myself in a more basic and free way.
 
 **If you would like to contribute your own page, I would be delighted to receive it!**
-
-## Demo
-
-**Live site:** [https://fonsicreus.github.io/Custom-Web-Profiles/](https://fonsicreus.github.io/Custom-Web-Profiles/)
 
 ## Available Profiles
 
@@ -48,7 +44,6 @@ Custom web profiles to use as a link on Discord or other platforms. Inspired by 
   - Reset button to restore default opacity
 - Chinese greeting with vertical text orientation
 - Animated Chinese characters using Hanzi Writer
-- Profile card with avatar and social links (GitHub, YouTube, Portfolio)
 - Red/black color scheme with monospace typography
 - Responsive design with mobile optimizations
 
