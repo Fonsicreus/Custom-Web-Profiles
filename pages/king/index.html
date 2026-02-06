@@ -1,0 +1,233 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Icon" href="./resources/logo.svg" type="image/svg" />
+
+    <title>Card - The Daily Life of the Immortal king</title>
+
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
+    <script type="module" src="./scripts/main.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Header: video controls (play/pause, opacity, mute) and optional home link -->
+    <header class="page-header">
+      <div class="div-header">
+        <div class="header-controls">
+          <button
+            type="button"
+            class="header-btn"
+            id="btn-play-pause"
+            title="Play / Pause video"
+            aria-label="Play background video"
+          >
+            <span class="btn-icon icon-play" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                focusable="false"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </span>
+            <span class="btn-icon icon-pause" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                focusable="false"
+              >
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+              </svg>
+            </span>
+          </button>
+          <button
+            type="button"
+            class="header-btn"
+            id="btn-mute"
+            title="Mute / Unmute"
+            aria-label="Unmute video"
+          >
+            <span class="btn-icon icon-mute" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                focusable="false"
+              >
+                <path
+                  d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"
+                />
+              </svg>
+            </span>
+            <span class="btn-icon icon-unmute" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                focusable="false"
+              >
+                <path
+                  d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
+                />
+              </svg>
+            </span>
+          </button>
+          <label class="header-opacity-label">
+            <span>Video opacity</span>
+            <input
+              type="range"
+              id="video-opacity"
+              class="header-opacity"
+              min="0"
+              max="100"
+              value="20"
+              title="Background video opacity"
+            />
+          </label>
+          <button
+            type="button"
+            class="header-btn"
+            id="btn-reset-opacity"
+            title="Reset opacity to default"
+            aria-label="Reset video and card opacity to default"
+          >
+            <span class="btn-icon" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                focusable="false"
+              >
+                <path
+                  d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <a href="#" class="header-link" title="Back to home"
+          >Home</a
+        >
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Full-screen looping background video (muted) -->
+      <video
+        id="background-video"
+        loop
+        muted
+        playsinline
+        class="background-video"
+        data-default-opacity="0.2"
+      >
+        <source
+          src="./resources/Japan-is-turning-footsteps-into-electricity!-Using-piezoelectric-tiles-every-step-you-take.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video element.
+      </video>
+
+      <!-- Profile card: greeting, avatar, username, social links -->
+      <section class="section-about-me">
+        <div class="div-top">
+          <p class="greeting">你好</p>
+
+          <img
+            draggable="false"
+            class="avatar"
+            src="./resources/avatar.jpg"
+            alt="Foto de perfil"
+          />
+        </div>
+        <h1 class="user">Fravelz</h1>
+
+        <div class="div-advice">
+          <!-- Mount point for script-generated content (e.g. character/canvas) -->
+          <div class="advice-chinese"></div>
+
+          <p>(You are the architect and master of your life)</p>
+        </div>
+
+        <nav class="links">
+          <a
+            href="https://github.com/fravelz"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-item"
+          >
+            <span class="link-icon" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                focusable="false"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </span>
+            <span class="link-text">GitHub</span>
+          </a>
+          <a
+            href="https://youtube.com/@fravelz"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-item"
+          >
+            <span class="link-icon" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                focusable="false"
+              >
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                />
+              </svg>
+            </span>
+            <span class="link-text">YouTube</span>
+          </a>
+          <a
+            href="https://fravelz.github.io/WEB-Fravelz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-item"
+          >
+            <span class="link-icon" aria-hidden="true">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                focusable="false"
+              >
+                <path
+                  d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"
+                />
+              </svg>
+            </span>
+            <span class="link-text">Portfolio</span>
+          </a>
+        </nav>
+      </section>
+    </main>
+  </body>
+</html>
