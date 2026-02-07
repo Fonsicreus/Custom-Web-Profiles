@@ -15,9 +15,9 @@ Custom web profiles to use as a link on Discord or other platforms. I made this 
 **Features:**
 
 - Full-screen looping background video
-- Interactive particles (particles.js) with dual layers
-- Animated avatar (GIF) and Japanese username
-- Social links to Steam, X (Twitter), and Discord
+- Interactive particles (particles.js)
+- Avatar
+- Social links
 - Expandable biography panel (toggle with arrow button)
 - Background music with custom volume slider
 - Random hidden phrases displayed with typewriter effect
@@ -68,7 +68,7 @@ Custom web profiles to use as a link on Discord or other platforms. I made this 
 
 Contributions are welcome! If you'd like to add your own profile page:
 
-1. Create a new folder in `pages/your-profile-name/`
+1. Create a new folder in `pages/your-page-name/`
 2. Add your HTML, CSS, and assets
 3. Update this README with your profile information and screenshot
 4. Submit a pull request
