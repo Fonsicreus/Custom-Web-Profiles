@@ -4,7 +4,8 @@
  */
 
 /* Prevent unwanted scrolling on mobile and horizontal overflow */
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -157,7 +158,7 @@ img.satella {
 /* Bio */
 .flex-body-bio {
   position: fixed;
-  inset: 0; 
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,6 +211,7 @@ img.satella {
   border-radius: 100px;
   box-shadow: 0px 0px 10px 10px rgba(35, 0, 80, 0.45);
   background-color: rgba(49, 0, 113, 0.5);
+  transition: all 0.5s ease-in-out;
 }
 
 /* Music player */
@@ -354,7 +356,9 @@ img.satella {
   white-space: nowrap;
   overflow: hidden;
   border-right: solid white;
-  animation: typing 4.5s steps(48) forwards, erase 3s steps(48) 6s forwards;
+  animation:
+    typing 4.5s steps(48) forwards,
+    erase 3s steps(48) 6s forwards;
   padding-left: 10px;
 }
 
@@ -376,28 +380,39 @@ img.satella {
     right: 12px;
     transform: translateY(-50%);
     max-width: 90px;
+    animation: center 4.5s ease-in-out infinite;
   }
 }
 
 @media screen and (max-width: 500px) {
+  .bio {
+    width: 400px;
+    padding: 10px;
+  }
 
- .center {
-  width: 400px;
- }
-
- .img-satella {
-  margin-right: 0;
- }
-
- .bio {
-  width: 400px;
-  padding: 10px;
- }
-
- .pull-down-menu {
+  .pull-down-menu {
     top: 70%;
   }
 
+  .username {
+    padding: 0;
+    padding-right: 10px;
+    width: 100%;
+  }
+
+  .typewriter-text {
+    display: none;
+  }
+
+  img.satella {
+    margin: 20px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .pull-down-menu {
+    top: 90%;
+  }
 }
 
 /* End of Media querys */
