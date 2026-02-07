@@ -1,0 +1,33 @@
+@media screen and (max-width: 600px) {
+    .div-header {
+        flex-direction: column;
+    }
+
+    .header-controls span {
+        display: none;
+    }
+
+    .section-about-me {
+        max-width: 100vh;
+        padding: 0.5rem;
+        border-radius: 0px;
+    }
+
+    .div-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 0rem;
+    }
+
+    .greeting {
+        font-size: 4rem;
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+    }
+
+    .advice-chinese div {
+        width: 23px;
+        height: 23px;
+    }
+
+}

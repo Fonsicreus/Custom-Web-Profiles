@@ -4,26 +4,74 @@ Custom web profiles to use as a link on Discord or other platforms. I made this 
 
 **If you would like to contribute your own page, I would be delighted to receive it!**
 
-## Webs
+## Available Profiles
 
-**Satella:** [Satella page made by Satella](https://fonsicreus.github.io/Custom-Web-Profiles/satella.html)
+### 🌙 Satella
 
-**King:** [King page made by Fravelz](https://fonsicreus.github.io/Custom-Web-Profiles/pages/king/index.html)
+**Theme:** Re:Zero-inspired layout with medieval aesthetics  
+**Live:** [View Satella profile](https://fonsicreus.github.io/Custom-Web-Profiles/pages/satella/satella.html)  
+**Made by:** [Satella](https://github.com/Fonsicreus)
 
-## Features (Satella profile)
+**Features:**
 
-- Expandable bio on arrow click
-- Random hidden phrases on the page
-  
-### Screenshot
+- Full-screen looping background video
+- Interactive particles (particles.js)
+- Avatar
+- Social links
+- Expandable biography panel (toggle with arrow button)
+- Background music with custom volume slider
+- Random hidden phrases displayed with typewriter effect
+- Medieval-style typography (MedievalSharp)
 
-![](./pages/satella/screenshot.png)
+**Screenshot:**
+
+![Satella profile screenshot](./pages/satella/screenshot.png)
+
+---
+
+### 👑 King
+
+**Theme:** The Daily Life of the Immortal King — red/black cyberpunk aesthetic  
+**Live:** [View King profile](https://fonsicreus.github.io/Custom-Web-Profiles/pages/king/index.html)  
+**Made by:** [Fravelz](https://github.com/fravelz)
+
+**Features:**
+- Full-screen background video with interactive controls
+- Video controls header:
+  - Play/Pause with SVG icons
+  - Mute/Unmute toggle
+  - Opacity slider (affects video and card inversely)
+  - Reset button to restore default opacity
+- Chinese greeting with vertical text orientation
+- Animated Chinese characters using Hanzi Writer
+- Red/black color scheme with monospace typography
+- Responsive design with mobile optimizations
+
+**Screenshot:**
+
+![King profile screenshot](./pages/king/resources/screenshot.png)
+
+---
 
 ## Credits
 
-- **Background video (Satella):** [YouTube — 5XJAiHD8rXQ](https://www.youtube.com/watch?v=5XJAiHD8rXQ)
-- **Particles:** [particles.js](https://github.com/VincentGarreau/particles.js) (jsDelivr CDN)
+### Satella Profile
+- **Background video:** [YouTube — 5XJAiHD8rXQ](https://www.youtube.com/watch?v=5XJAiHD8rXQ)
+- **Particles library:** [particles.js](https://github.com/VincentGarreau/particles.js) (jsDelivr CDN)
 - **Typography:** [Google Fonts — MedievalSharp](https://fonts.google.com/specimen/MedievalSharp)
+
+### King Profile
+- **Chinese character animation:** [Hanzi Writer](https://github.com/chanind/hanzi-writer) (jsDelivr CDN)
+- **Typography:** Noto Sans SC (Chinese font)
+
+## Contributing
+
+Contributions are welcome! If you'd like to add your own profile page:
+
+1. Create a new folder in `pages/your-page-name/`
+2. Add your HTML, CSS, and assets
+3. Update this README with your profile information and screenshot
+4. Submit a pull request
 
 ## License
 
