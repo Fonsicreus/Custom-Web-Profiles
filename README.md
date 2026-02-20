@@ -64,15 +64,6 @@ Custom web profiles to use as a link on Discord or other platforms. I made this 
 - **Chinese character animation:** [Hanzi Writer](https://github.com/chanind/hanzi-writer) (jsDelivr CDN)
 - **Typography:** Noto Sans SC (Chinese font)
 
-## Contributing
-
-Contributions are welcome! If you'd like to add your own profile page:
-
-1. Create a new folder in `pages/your-page-name/`
-2. Add your HTML, CSS, and assets
-3. Update this README with your profile information and screenshot
-4. Submit a pull request
-
 ## License
 
 This project is licensed under the [GNU General Public License v3.0](LICENSE).
