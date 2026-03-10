@@ -9,7 +9,7 @@ Custom web profiles to use as a link on Discord or other platforms. I made this 
 ### 🌙 Satella
 
 **Theme:** Re:Zero-inspired layout with medieval aesthetics  
-**Live:** [View Satella profile](https://fonsicreus.github.io/Custom-Web-Profiles/pages/satella/satella.html)  
+**Live:** [View Satella profile](https://fonsicreus.github.io/Custom-Web-Profiles/satella.html)  
 **Made by:** [Satella](https://github.com/Fonsicreus)
 
 **Features:**
