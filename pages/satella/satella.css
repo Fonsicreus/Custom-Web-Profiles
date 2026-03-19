@@ -3,13 +3,10 @@
  * Theme: Re:Zero-inspired layout.
  */
 
-/* Prevent unwanted scrolling on mobile and horizontal overflow */
-html,
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
+/* Define CSS variables for consistent theming */ 
+:root {
+  --satella-shadow-color: rgba(72, 40, 105, 0.451);
+  --satella-transparent-background-color: rgba(0, 0, 0, 0.45); 
 }
 
 /* Click to enter */
@@ -28,7 +25,6 @@ body {
   z-index: 100;
   cursor: pointer;
   font-family: "MedievalSharp", serif;
-  opacity: 1;
 }
 
 .click-to-enter.fade-out {
@@ -50,7 +46,6 @@ body {
   background-color: rgba(49, 0, 113, 0.6);
   padding: 5px 10px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(72, 40, 105, 0.45);
   z-index: 101;
   animation: to-the-front 1s ease-in-out 1;
 }
@@ -60,8 +55,8 @@ body {
 }
 
 .credits:hover {
-  background-color: rgba(72, 40, 105, 0.8);
-  color: #9370db;
+  background-color: var(--satella-shadow-color);
+  color: rgb(147, 112, 219);
 }
 
 /* End of Click to enter */
@@ -69,21 +64,15 @@ body {
 /* Body for Satella */
 body.satella {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   margin: 0;
-  padding: 0;
   height: 100vh;
-  overflow: hidden; /* prevent page vertical scroll */
-  overscroll-behavior: contain; /* avoid overscroll bounce on mobile */
-  touch-action: manipulation;
 }
 
 .background-video {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -99,9 +88,9 @@ body.satella {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: var(--satella-transparent-background-color);
   border-radius: 100px;
-  box-shadow: 0px 0px 10px 10px rgba(72, 40, 105, 0.45);
+  box-shadow: 0px 0px 10px 10px var(--satella-shadow-color);
   animation: center 4.5s ease-in-out infinite;
 }
 
@@ -115,8 +104,9 @@ img.satella {
   border-radius: 50%;
   object-fit: cover;
   aspect-ratio: 1 / 1;
-  box-shadow: 0px 0px 10px 10px rgba(49, 0, 113, 0.45);
+  box-shadow: 0px 0px 10px 10px var(--satella-shadow-color);
 }
+/* End of Satella image */
 
 /* Username */
 .username {
@@ -127,11 +117,8 @@ img.satella {
   width: 25vh;
   height: 10vh;
 }
-
 /* End of Username */
-/* End of Satella image */
 /* End of Text and icon container */
-/* End of Satella container */
 
 /* Social links */
 .link {
@@ -146,14 +133,14 @@ img.satella {
 .link-image {
   width: 100%;
   max-width: 50px;
-  z-index: 100;
-  border-radius: 50%;
+  border-radius: 100%;
   object-fit: cover;
   aspect-ratio: 1 / 1;
   box-shadow: 0px 0px 10px 10px rgba(49, 0, 113, 0.45);
-  border: 2px solid hsl(260, 60%, 30%);
+  border: 2px solid var(--satella-shadow-color);
 }
 /* End of Social links */
+/* End of Satella container */
 
 /* Bio */
 .flex-body-bio {
@@ -165,10 +152,10 @@ img.satella {
 }
 
 .bio {
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: var(--satella-transparent-background-color);
   padding: 24px 40px;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px 10px rgba(72, 40, 105, 0.45);
+  box-shadow: 0px 0px 10px 10px var(--satella-shadow-color);
   animation: center 4.5s ease-in-out infinite;
   max-width: 80vw;
   width: min(700px, 90%);
@@ -187,11 +174,11 @@ img.satella {
   border-radius: 5px;
   font-family: "MedievalSharp", serif;
   font-size: 1.2em;
-  color: #f0f0f0;
+  color: rgb(240, 240, 240);
 }
 
 .soft-link {
-  color: #4b0082;
+  color: rgb(75, 0, 130);
   text-decoration: none;
 }
 
@@ -209,7 +196,8 @@ img.satella {
   max-width: 120px;
   cursor: pointer;
   border-radius: 100px;
-  box-shadow: 0px 0px 10px 10px rgba(35, 0, 80, 0.45);
+  box-shadow: 0px 0px 10px 10px var(--satella-shadow-color);
+  border: 2px solid var(--satella-shadow-color);
   background-color: rgba(49, 0, 113, 0.5);
   transition: all 0.5s ease-in-out;
 }
@@ -218,10 +206,10 @@ img.satella {
 .musicplayer {
   position: fixed;
   bottom: 7%;
-  right: 10px;
+  right: -2%;
   width: max-content;
   border-radius: 100px;
-  box-shadow: 0px 0px 10px 15px rgba(72, 40, 105, 0.45);
+  box-shadow: 0px 0px 10px 15px var(--satella-shadow-color);
   transform: rotate(-90deg);
   transform-origin: center;
   background-color: rgba(49, 0, 113, 0.5);
@@ -247,8 +235,8 @@ img.satella {
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
-    background: #4b0082;
-    border: 2px solid hsl(260, 60%, 55%);
+    background: rgb(75, 0, 130);
+    border: 2px solid rgb(117, 71, 209);
     border-radius: 50%;
     margin-top: -5px;
     cursor: pointer;
@@ -373,14 +361,11 @@ img.satella {
 /* End of Utilities */
 
 /* Media querys */
-
 @media screen and (max-width: 1000px) {
   .pull-down-menu {
-    top: 68%;
+    top: 75%;
     right: 12px;
-    transform: translateY(-50%);
     max-width: 90px;
-    animation: center 4.5s ease-in-out infinite;
   }
 }
 
@@ -391,7 +376,7 @@ img.satella {
   }
 
   .pull-down-menu {
-    top: 70%;
+    top: 85%;
   }
 
   .username {

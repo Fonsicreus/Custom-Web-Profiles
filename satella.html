@@ -16,58 +16,61 @@
     <script src="./pages/satella/js/index_satella.js" type="module" ></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-    <main class="flex-body">
       <!-- Main container: avatar + name + social links -->
-      <div class="socials">
-        <!-- Animated avatar (gif) and username -->
-        <div class="center">
-          <img
-            class="satella"
-            src="./pages/satella/images/icon_satella.gif"
-            alt="Icon"
-          />
-          <p class="username">サテラ</p>
-        </div>
+      <main>
+        <div class="socials">
+          <!-- Animated avatar (gif) and username -->
+          <div class="center">
+            <img
+              class="satella"
+              src="./pages/satella/images/icon_satella.gif"
+              alt="Icon"
+            />
+            <p class="username">サテラ</p>
+          </div>
 
-        <!-- Clickable icons: Steam, X (Twitter), Discord -->
-        <div class="link">
-          <a href="https://steamcommunity.com/id/Fonsicreus/" target="_blank">
-            <img
-              class="link-image"
-              src="./pages/satella/images/icon_steam.png"
-              alt="Icon"
-            />
-          </a>
-          <a href="https://x.com/Fonsicreus" target="_blank">
-            <img
-              class="link-image"
-              src="./pages/satella/images/icon_x.jpg"
-              alt="Icon"
-            />
-          </a>
-          <a href="https://discord.gg/Aje9WwjpRu" target="_blank">
-            <img
-              class="link-image"
-              src="./pages/satella/images/icon_discord.png"
-              alt="Icon"
-            />
-          </a>
+          <!-- Clickable icons: Steam, X (Twitter), Discord -->
+          <div class="link">
+            <a href="https://steamcommunity.com/id/Fonsicreus/" target="_blank">
+              <img
+                class="link-image"
+                src="./pages/satella/images/icon_steam.png"
+                alt="Icon"
+              />
+            </a>
+            <a href="https://x.com/Fonsicreus" target="_blank">
+              <img
+                class="link-image"
+                src="./pages/satella/images/icon_x.jpg"
+                alt="Icon"
+              />
+            </a>
+            <a href="https://discord.gg/Aje9WwjpRu" target="_blank">
+              <img
+                class="link-image"
+                src="./pages/satella/images/icon_discord.png"
+                alt="Icon"
+              />
+            </a>
+          </div>
         </div>
-      </div>
+      </main>
 
-      <!-- Expandable biography (hidden by default; shown when the arrow is clicked) -->
-      <div class="flex-body-bio" style="display: none">
-        <div class="bio">
-          <ul class="bio-list">
-            <li>This is my first website!</li>
-            <li>I am studying HTML, CSS, and JS.</li>
-            <li>3 years of experience in Blender as an animator.</li>
-            <li>I have studies in computer assembly, maintenance, and networking.</li>
-            <li>My favorite anime are Frieren, Re:Zero, Ookami Kodomo no Ame to Yuki, and Houseki no Kuni.</li>
-            <li><a href="https://myanimelist.net/profile/Fonsicreus" target="_blank" class="soft-link">Here is a link to my MyAnimeList profile if anyone is interested</a></li>
-          </ul>
+      <section>
+        <!-- Expandable biography (hidden by default; shown when the arrow is clicked) -->
+        <div class="flex-body-bio" style="display: none">
+          <div class="bio">
+            <ul class="bio-list">
+              <li>This is my first website!</li>
+              <li>I am studying HTML, CSS, and JS.</li>
+              <li>3 years of experience in Blender as an animator.</li>
+              <li>I have studies in computer assembly, maintenance, and networking.</li>
+              <li>My favorite anime are Frieren, Re:Zero, Ookami Kodomo no Ame to Yuki, and Houseki no Kuni.</li>
+              <li><a href="https://myanimelist.net/profile/Fonsicreus" target="_blank" class="soft-link">Here is a link to my MyAnimeList profile if anyone is interested</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </section>
 
       <!-- Arrow that toggles the biography on click (clickOnImage in utilities.js) -->
       <img
@@ -93,7 +96,6 @@
       <p class="add-text" style="display: none">
         DON'T YOU DARE TO LEAVE ME
       </p>
-    </main>
 
       <!-- Link to credits (YouTube video) -->
       <a
